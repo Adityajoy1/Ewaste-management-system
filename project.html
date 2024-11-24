@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="che.css">
+    <title>E-Waste Management System</title>
+</head>
+<body>
+    <header>
+        <h1>E-Waste Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#track">Track E-Waste</a></li>
+                <li><a href="#recycling">Optimize Recycling</a></li>
+                <li><a href="#disposal">Proper Disposal Methods</a></li>
+                <li><a href="#dropoff">Drop-off Points</a></li>
+                <li><a href="#book">Book Pickup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="track">
+        <h2>Track E-Waste</h2>
+        <form id="trackForm">
+            <label for="itemID">E-Waste Item ID:</label>
+            <input type="text" id="itemID" name="itemID" required>
+            <button type="submit">Track</button>
+        </form>
+        <div id="trackingResult" class="hidden"></div>
+    </section>
+
+    <section id="recycling">
+        <h2>Optimize Recycling Processes</h2>
+        <p>Our platform helps optimize recycling processes by tracking inventory and providing analytics.</p>
+        <button onclick="showOptimizationTips()">Show Optimization Tips</button>
+        <div id="optimizationTips" class="hidden">
+            <ul>
+                <li>Regularly update inventory for better resource allocation.</li>
+                <li>Collaborate with local recycling centers to streamline processes.</li>
+                <li>Educate staff on proper e-waste handling.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="disposal">
+        <h2>Proper Disposal Methods</h2>
+        <p>Follow these guidelines for responsible e-waste disposal:</p>
+        <ul>
+            <li>Drop off at certified e-waste recycling centers.</li>
+            <li>Participate in local e-waste collection events.</li>
+            <li>Check manufacturer take-back programs.</li>
+        </ul>
+    </section>
+
+    <section id="dropoff">
+        <h2>Find Nearest E-Waste Drop-off Points</h2>
+        <form id="locationForm">
+            <label for="location">Enter Your Location:</label>
+            <input type="text" id="location" name="location" required>
+            <button type="submit">Find Drop-off Points</button>
+        </form>
+        <div id="dropoffResult" class="hidden"></div>
+        <iframe
+            id="map"
+            src=""
+            width="100%"
+            height="400"
+            style="border: 1px solid black;">
+        </iframe>
+    </section>
+
+    <section id="book">
+        <h2>Book E-Waste Pickup</h2>
+        <form id="bookingForm">
+            <label for="pickupLocation">Pickup Location:</label>
+            <input type="text" id="pickupLocation" name="pickupLocation" required>
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" id="pickupDate" name="pickupDate" required>
+            <label for="items">Items to Pickup:</label>
+            <textarea id="items" name="items" rows="4" required></textarea>
+            <button type="submit">Book Pickup</button>
+        </form>
+        <div id="bookingResult" class="hidden"></div>
+    </section>
+
+    <footer>
+        <p>Contact us at info@ewastemanagement.com</p>
+    </footer>
+
+    <script src="che.js"></script>
+</body>
+</html>
